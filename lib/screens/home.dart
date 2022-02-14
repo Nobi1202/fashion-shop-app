@@ -21,21 +21,21 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       backgroundColor: appBgColor,
       body: CustomScrollView(
-        // slivers: [
-        //   SliverAppBar(
-        //     backgroundColor: appBarColor,
-        //     pinned: true,
-        //     snap: true,
-        //     floating: true,
-        //     title: getAppBar(),
-        //   ),
-        //   SliverList(
-        //     delegate: SliverChildBuilderDelegate(
-        //       (context, index) => buildBody(),
-        //       childCount: 1,
-        //     ),
-        //   )
-        // ],
+        slivers: [
+          SliverAppBar(
+            backgroundColor: appBarColor,
+            pinned: true,
+            snap: true,
+            floating: true,
+            title: getAppBar(),
+          ),
+          SliverList(
+            delegate: SliverChildBuilderDelegate(
+              (context, index) => buildBody(),
+              childCount: 1,
+            ),
+          )
+        ],
       )
     );
   }
@@ -43,125 +43,125 @@ class _HomePageState extends State<HomePage> {
   Widget getAppBar(){
     return
       Container(
-        // child: Row(
-        //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        //   children: [
-        //     Expanded(child:
-        //       Column(
-        //         mainAxisAlignment: MainAxisAlignment.center,
-        //         crossAxisAlignment: CrossAxisAlignment.start,
-        //         children: [
-        //           Row(
-        //             children: [
-        //               Icon(Icons.person, color: labelColor, size: 20,),
-        //               SizedBox(width: 5,),
-        //               Text(profile["name"]!, style: TextStyle(color: labelColor, fontSize: 13,),),
-        //             ],
-        //           ),
-        //           SizedBox(height: 5,),
-        //           Text("Good Morning!", style: TextStyle(color: textColor, fontWeight: FontWeight.w500, fontSize: 18,)),
-        //         ],
-        //       )
-        //     ),
-        //     NotificationBox(
-        //       notifiedNumber: 1,
-        //       onTap: () {
-        //
-        //       },
-        //     )
-        //   ],
-        // ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Expanded(child:
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    children: [
+                      Icon(Icons.person, color: labelColor, size: 20,),
+                      SizedBox(width: 5,),
+                      Text(profile["name"]!, style: TextStyle(color: labelColor, fontSize: 13,),),
+                    ],
+                  ),
+                  SizedBox(height: 5,),
+                  Text("Good Morning!", style: TextStyle(color: textColor, fontWeight: FontWeight.w500, fontSize: 18,)),
+                ],
+              )
+            ),
+            NotificationBox(
+              notifiedNumber: 1,
+              onTap: () {
+
+              },
+            )
+          ],
+        ),
       );
   }
 
   buildBody(){
     return
       SingleChildScrollView(
-        // child: Padding(
-        //   padding: const EdgeInsets.only(top: 0, bottom: 10),
-        //   child: Column(
-        //       crossAxisAlignment: CrossAxisAlignment.start,
-        //       children:[
-        //         SizedBox(height: 20,),
-        //         getCollections(),
-        //         SizedBox(height: 20,),
-        //         Padding(
-        //           padding: const EdgeInsets.fromLTRB(15, 0, 15, 25),
-        //           child: Text("Popular", style: TextStyle(color: textColor, fontWeight: FontWeight.w600, fontSize: 24,)),
-        //         ),
-        //         getPopulars(),
-        //         SizedBox(height: 20,),
-        //         Container(
-        //           margin: EdgeInsets.only(left: 15, right: 15, bottom: 10, top: 10),
-        //           child: Row(
-        //             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        //             children: [
-        //               Text("New", style: TextStyle(fontSize: 22, fontWeight: FontWeight.w600, color: textColor),),
-        //               Text("See all", style: TextStyle(fontSize: 14, color: darker),),
-        //             ],
-        //           ),
-        //         ),
-        //         getNewItems(),
-        //       ]
-        //   ),
-        // ),
+        child: Padding(
+          padding: const EdgeInsets.only(top: 0, bottom: 10),
+          child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children:[
+                SizedBox(height: 20,),
+                getCollections(),
+                SizedBox(height: 20,),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(15, 0, 15, 25),
+                  child: Text("Popular", style: TextStyle(color: textColor, fontWeight: FontWeight.w600, fontSize: 24,)),
+                ),
+                getPopulars(),
+                SizedBox(height: 20,),
+                Container(
+                  margin: EdgeInsets.only(left: 15, right: 15, bottom: 10, top: 10),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text("New", style: TextStyle(fontSize: 22, fontWeight: FontWeight.w600, color: textColor),),
+                      Text("See all", style: TextStyle(fontSize: 14, color: darker),),
+                    ],
+                  ),
+                ),
+                getNewItems(),
+              ]
+          ),
+        ),
       );
   }
 
   getCollections(){
     return 
       SingleChildScrollView(
-        // padding: EdgeInsets.all(10),
-        // scrollDirection: Axis.horizontal,
-        // child: Row(
-        //   children: List.generate(collections.length, (index) =>
-        //     Padding(
-        //       padding: const EdgeInsets.only(right: 10),
-        //       child: CollectionBox(data: collections[index])
-        //     )
-        //   )
-        // ),
+        padding: EdgeInsets.all(10),
+        scrollDirection: Axis.horizontal,
+        child: Row(
+          children: List.generate(collections.length, (index) =>
+            Padding(
+              padding: const EdgeInsets.only(right: 10),
+              child: CollectionBox(data: collections[index])
+            )
+          )
+        ),
       );
   }
 
-  // getPopulars(){
-  //   return
-  //     CarouselSlider(
-  //       options: CarouselOptions(
-  //         height: 370,
-  //         enlargeCenterPage: true,
-  //         disableCenter: true,
-  //         viewportFraction: .75,
-  //       ),
-  //       items: List.generate(populars.length,
-  //         (index) => PopularItem(data: populars[index],
-  //           onTap: (){
-  //
-  //             },
-  //         ),
-  //       )
-  //     );
-  // }
+  getPopulars(){
+    return
+      CarouselSlider(
+        options: CarouselOptions(
+          height: 370,
+          enlargeCenterPage: true,
+          disableCenter: true,
+          viewportFraction: .75,
+        ),
+        items: List.generate(populars.length,
+          (index) => PopularItem(data: populars[index],
+            onTap: (){
 
-  // getNewItems(){
-  //   return
-  //   SingleChildScrollView(
-  //       padding: EdgeInsets.all(10),
-  //       scrollDirection: Axis.horizontal,
-  //       child: Row(
-  //         children: List.generate(news.length, (index) =>
-  //           Padding(
-  //             padding: const EdgeInsets.only(right: 10),
-  //             child: NewItem(
-  //               data: news[index],
-  //               onTap: (){
-  //
-  //               },
-  //             )
-  //           )
-  //         )
-  //       ),
-  //     );
-  // }
+              },
+          ),
+        )
+      );
+  }
+
+  getNewItems(){
+    return
+    SingleChildScrollView(
+        padding: EdgeInsets.all(10),
+        scrollDirection: Axis.horizontal,
+        child: Row(
+          children: List.generate(news.length, (index) =>
+            Padding(
+              padding: const EdgeInsets.only(right: 10),
+              child: NewItem(
+                data: news[index],
+                onTap: (){
+
+                },
+              )
+            )
+          )
+        ),
+      );
+  }
 
 }
