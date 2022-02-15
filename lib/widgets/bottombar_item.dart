@@ -16,32 +16,32 @@ class BottomBarItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      // onTap: onTap,
-      // child:
-      // Container(
-      //   alignment: Alignment.center,
-      //   child: Stack(
-      //     alignment: Alignment.center,
-      //     children: <Widget>[
-      //       Container(
-      //         padding: EdgeInsets.all(7),
-      //         decoration: BoxDecoration(
-      //           borderRadius: BorderRadius.circular(50),
-      //           color: isActive ? bottomBarColor.withOpacity(1) : Colors.transparent,
-      //           boxShadow: [
-      //             if(isActive) BoxShadow(
-      //               color: shadowColor.withOpacity(0.1),
-      //               spreadRadius: 2,
-      //               blurRadius: 2,
-      //               offset: Offset(0, 1), // changes position of shadow
-      //             ),
-      //           ],
-      //         ),
-      //         child: SvgPicture.asset(icon, color: isActive ? activeColor : color, width: 23, height: 23,),
-      //       ),
-      //     ]
-      //   ),
-      // ),
+      onTap: onTap,
+      child:
+      Container(
+        alignment: Alignment.center,
+        child: Stack(
+          alignment: Alignment.center,
+          children: <Widget>[
+            Container(
+              padding: EdgeInsets.all(7),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(50),
+                color: isActive ? bottomBarColor.withOpacity(1) : Colors.transparent,
+                boxShadow: [
+                  if(isActive) BoxShadow(
+                    color: shadowColor.withOpacity(0.1),
+                    spreadRadius: 2,
+                    blurRadius: 2,
+                    offset: Offset(0, 1), // changes position of shadow
+                  ),
+                ],
+              ),
+              child: SvgPicture.asset(icon, color: isActive ? activeColor : color, width: 23, height: 23,),
+            ),
+          ]
+        ),
+      ),
     );
   }
 }

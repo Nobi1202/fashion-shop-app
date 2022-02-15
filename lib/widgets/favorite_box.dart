@@ -15,20 +15,20 @@ class FavoriteBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      // onTap: onTap,
-      // child: AnimatedContainer(
-      //   padding: EdgeInsets.all(padding),
-      //   duration: const Duration(milliseconds: 500),
-      //   curve: Curves.fastOutSlowIn,
-      //   decoration: BoxDecoration(
-      //     color: isFavorited ? red : primary.withOpacity(.5),
-      //     shape: BoxShape.circle
-      //   ),
-      //   child: isFavorited ?
-      //   Icon(Icons.favorite, color: Colors.white, size: size,)
-      //   :
-      //   Icon(Icons.favorite_border, color: Colors.white, size: size,)
-      // ),
+      onTap: onTap,
+      child: AnimatedContainer(
+        padding: EdgeInsets.all(padding),
+        duration: const Duration(milliseconds: 500),
+        curve: Curves.fastOutSlowIn,
+        decoration: BoxDecoration(
+          color: isFavorited ? red : primary.withOpacity(.5),
+          shape: BoxShape.circle
+        ),
+        child: isFavorited ?
+        Icon(Icons.favorite, color: Colors.white, size: size,)
+        :
+        Icon(Icons.favorite_border, color: Colors.white, size: size,)
+      ),
     );
   }
 }
