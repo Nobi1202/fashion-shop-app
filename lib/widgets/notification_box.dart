@@ -12,24 +12,24 @@ class NotificationBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      // onTap: onTap,
-      // child: Container(
-      //   padding: EdgeInsets.all(size),
-      //   decoration: BoxDecoration(
-      //     shape: BoxShape.circle,
-      //     color: appBarColor,
-      //     border: Border.all(color: Colors.grey.withOpacity(.3)),
-      //   ),
-      //   child: notifiedNumber > 0 ? Badge(
-      //     badgeColor: actionColor,
-      //     padding: EdgeInsets.all(3),
-      //     position: BadgePosition.topEnd(top: -7, end: 0),
-      //     badgeContent: Text('', style: TextStyle(color: Colors.white),),
-      //     child: SvgPicture.asset("assets/icons/bell.svg", width: 25, height: 25,)
-      //   )
-      //   :
-      //   SvgPicture.asset("assets/icons/bell.svg")
-      // ),
+      onTap: onTap,
+      child: Container(
+        padding: EdgeInsets.all(size),
+        decoration: BoxDecoration(
+          shape: BoxShape.circle,
+          color: appBarColor,
+          border: Border.all(color: Colors.grey.withOpacity(.3)),
+        ),
+        child: notifiedNumber > 0 ? Badge(
+          badgeColor: actionColor,
+          padding: EdgeInsets.all(3),
+          position: BadgePosition.topEnd(top: -7, end: 0),
+          badgeContent: Text('', style: TextStyle(color: Colors.white),),
+          child: SvgPicture.asset("assets/icons/bell.svg", width: 25, height: 25,)
+        )
+        :
+        SvgPicture.asset("assets/icons/bell.svg")
+      ),
     );
   }
 }
