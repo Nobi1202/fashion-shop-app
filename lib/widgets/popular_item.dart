@@ -12,55 +12,55 @@ class PopularItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      // onTap: onTap,
-      // child: Container(
-      //   width: 200,
-      //   height: 350,
-      //   decoration: BoxDecoration(
-      //     borderRadius: BorderRadius.circular(raduis)
-      //   ),
-      //   child: Stack(
-      //     children: [
-      //       Container(
-      //         child: CustomImage(data["image"],
-      //           radius: raduis, width: double.infinity, height: double.infinity,
-      //         ),
-      //       ),
-      //       Container(
-      //         width: double.infinity, height: double.infinity,
-      //         decoration: BoxDecoration(
-      //           borderRadius: BorderRadius.circular(raduis),
-      //           gradient: LinearGradient(
-      //             begin: Alignment.bottomCenter,
-      //             end: Alignment.topCenter,
-      //             colors: [
-      //               Colors.black.withOpacity(.5),
-      //               Colors.white.withOpacity(.01),
-      //             ]
-      //           )
-      //         ),
-      //       ),
-      //       Positioned(
-      //         bottom: 12, left: 10,
-      //         child: Column(
-      //           crossAxisAlignment: CrossAxisAlignment.start,
-      //           children: [
-      //             Text(data["name"], maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.w600),),
-      //             SizedBox(height: 8,),
-      //             Row(
-      //               children: [
-      //                 SvgPicture.asset("assets/icons/tag-dollar.svg", width: 17, height: 17, color: Colors.white,),
-      //                 SizedBox(width: 5,),
-      //                 Text(data["price"], style: TextStyle(fontSize: 15, color: Colors.white,),),
-      //               ],
-      //             ),
-      //           ],
-      //         ),
-      //       ),
-      //
-      //     ],
-      //   ),
-      // ),
+      onTap: onTap,
+      child: Container(
+        width: 200,
+        height: 350,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(raduis)
+        ),
+        child: Stack(
+          children: [
+            Container(
+              child: CustomImage(data["image"],
+                radius: raduis, width: double.infinity, height: double.infinity,
+              ),
+            ),
+            Container(
+              width: double.infinity, height: double.infinity,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(raduis),
+                gradient: LinearGradient(
+                  begin: Alignment.bottomCenter,
+                  end: Alignment.topCenter,
+                  colors: [
+                    Colors.black.withOpacity(.5),
+                    Colors.white.withOpacity(.01),
+                  ]
+                )
+              ),
+            ),
+            Positioned(
+              bottom: 12, left: 10,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(data["name"], maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.w600),),
+                  SizedBox(height: 8,),
+                  Row(
+                    children: [
+                      SvgPicture.asset("assets/icons/tag-dollar.svg", width: 17, height: 17, color: Colors.white,),
+                      SizedBox(width: 5,),
+                      Text(data["price"], style: TextStyle(fontSize: 15, color: Colors.white,),),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+
+          ],
+        ),
+      ),
     );
   }
 }
